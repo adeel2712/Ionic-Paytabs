@@ -1,0 +1,15 @@
+{
+  "name": "ionicpaytabsapp",
+  "version": "1.0.0",
+  "description": "To enable paytab ANdroid APi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ionic",
+    "paytab"
+  ],
+  "author": "Uxman",
+  "license": "ISC"
+}

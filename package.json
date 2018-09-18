@@ -11,5 +11,13 @@
     "paytab"
   ],
   "author": "Uxman",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UxmanKaxmi/paytabTest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/UxmanKaxmi/paytabTest/issues"
+  },
+  "homepage": "https://github.com/UxmanKaxmi/paytabTest#readme"
 }

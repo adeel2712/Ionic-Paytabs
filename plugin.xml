@@ -11,7 +11,7 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="paytab">
-                <param name="android-package" value="cordova.plugin.paytab" />
+                <param name="android-package" value="cordova.plugin.paytab.paytab" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml" />

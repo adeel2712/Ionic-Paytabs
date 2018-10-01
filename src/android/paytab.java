@@ -29,10 +29,16 @@ CallbackContext callback;
 
 
             JSONObject args = data.getJSONObject(0);
-            Log.d("Language: ",args.getString("language"));
 
-            String lang = args.getString("language"); //Use "ar" for Arabic
-            Locale myLocale = new Locale(lang );
+            String lang = "ar";
+
+            if (args.getString("language") == "English") {
+                 lang = "en";
+            } else {
+                 lang = "ar";
+            }
+
+            Locale myLocale = new Locale(lang);
             Resources res = cordova.getActivity().getApplicationContext().getResources();
             DisplayMetrics dm = res.getDisplayMetrics();
             Configuration conf = res.getConfiguration();

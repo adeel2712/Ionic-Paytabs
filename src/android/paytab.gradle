@@ -1,17 +1,15 @@
 repositories{    
  jcenter()
-   flatDir {
-        dirs 'libs'
-    }
+ flatDir {
+    dirs 'libs'
+  }
 }
 
 dependencies {
-  compile(name:'paytabs-android-SDK-v2.5', ext:'aar')
+  implementation project(':paytabs-android-SDK-v2.5')
+  // implementation(name:'paytabs-android-SDK-v2.5', ext:'aar')
 }
 
 android {
- packagingOptions {
-  exclude 'META-INF/NOTICE'
-  exclude 'META-INF/LICENSE'
- }
+    buildToolsVersion '23.0.2' // Older versions may give compile errors
 }

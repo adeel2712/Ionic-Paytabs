@@ -27,8 +27,9 @@
                 <param name="ios-package" value="paytab" />
             </feature>
         </config-file>
-        <source-file src="src/ios/paytab.m" />
+        <!-- <source-file src="src/ios/paytab.m" /> -->
         <framework src="src/ios/paytabs-iOS.framework" custom="true" />
+        <framework src="src/ios/Resources.bundle" custom="true" />
         <framework src="BIObjCHelpers" type="podspec" />
         <framework src="AFNetworking" type="podspec" />
         <framework src="Mantle" type="podspec" />

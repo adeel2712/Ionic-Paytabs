@@ -30,7 +30,17 @@
         <!-- <source-file src="src/ios/paytab.m" /> -->
         <framework src="src/ios/paytabs-iOS.framework" custom="true" />
         <framework src="src/ios/Resources.bundle" custom="true" />
-        
+        <framework src="BIObjCHelpers" type="podspec" spec=""/>
+        <framework src="AFNetworking" type="podspec" spec=""/>
+        <framework src="Mantle" type="podspec" spec=""/>
+        <framework src="Reachability" type="podspec" spec=""/>
+        <framework src="SDWebImage" type="podspec" spec=""/>
+        <framework src="DGActivityIndicatorView" type="podspec" spec=""/>
+        <framework src="Lockbox" type="podspec" spec=""/>
+        <framework src="YLGIFImage" type="podspec" spec=""/>
+        <framework src="SBJson" type="podspec" spec=""/>
+        <framework src="PINCache" type="podspec" spec=""/>
+        <framework src="IQKeyboardManager" type="podspec" spec=""/>
         
     </platform>
 </plugin>

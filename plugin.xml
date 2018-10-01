@@ -11,11 +11,13 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="paytab">
-                <param name="android-package" value="cordova.plugin.paytab.paytab" />
+                <param name="android-package" value="cordova.plugin.paytab" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml" />
-        <source-file src="src/android/paytab.java" target-dir="src/cordova/plugin/paytab/paytab" />
+        <source-file src="src/android/paytab.java" target-dir="src/cordova/plugin/paytab" />
+        <framework src="src/android/paytab.gradle" custom="true" type="gradleReference" />
+        <resource-file src="src/android/sdk/paytabs-android-SDK-v2.5.aar" target="paytabs-android-SDK-v2.5.aar" />  
     </platform>
 
 

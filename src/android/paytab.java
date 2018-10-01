@@ -12,6 +12,10 @@ import java.util.HashMap;
 import java.util.Map;
 import android.util.Log;
 import paytabs.project.PayTabActivity;
+import java.util.Locale;
+import android.util.DisplayMetrics;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 
 public class paytab extends CordovaPlugin {
 
@@ -25,10 +29,20 @@ CallbackContext callback;
 
 
             JSONObject args = data.getJSONObject(0);
+            Log.d("Language: ",args.getString("language"));
 
+            String lang = args.getString("language"); //Use "ar" for Arabic
+            Locale myLocale = new Locale(lang );
+            Resources res = cordova.getActivity().getApplicationContext().getResources();
+            DisplayMetrics dm = res.getDisplayMetrics();
+            Configuration conf = res.getConfiguration();
+            conf.locale = myLocale;
+            res.updateConfiguration(conf, dm);
 
 
             Intent PayTabs = new Intent(this.cordova.getActivity(), PayTabActivity.class);
+
+
 
             PayTabs.putExtra("pt_merchant_email", "kunwar.adeel@gmail.com");
             PayTabs.putExtra("pt_secret_key","F6oUQA0OMANTdh6MFNYiLbGRihq19HFPO3JFEJtqkgkxxrjceiv0ubSNsiPC0urOyatcUXCedXLLp5YDotETEwG7PvJP0bEym8Kh");

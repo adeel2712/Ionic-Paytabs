@@ -19,36 +19,35 @@ import android.content.res.Resources;
 
 public class paytab extends CordovaPlugin {
 
-CallbackContext callback;
-
+    CallbackContext callback;
 
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
         this.callback = callbackContext;
         if (action.equals("add")) {
 
-
             JSONObject args = data.getJSONObject(0);
+
+            Log.i("Card Data: ", args.toString());
+
+            Log.d("Language: ",args.getString("language"));
 
             String lang = "ar";
 
-            if (args.getString("language") == "English") {
+            if (args.getString("language").equalsIgnoreCase("English")) {
                  lang = "en";
             } else {
                  lang = "ar";
             }
 
             Locale myLocale = new Locale(lang);
-            Resources res = cordova.getActivity().getApplicationContext().getResources();
+            Resources res = cordova.getActivity().getResources();
             DisplayMetrics dm = res.getDisplayMetrics();
             Configuration conf = res.getConfiguration();
             conf.locale = myLocale;
             res.updateConfiguration(conf, dm);
 
-
             Intent PayTabs = new Intent(this.cordova.getActivity(), PayTabActivity.class);
-
-
 
             PayTabs.putExtra("pt_merchant_email", "kunwar.adeel@gmail.com");
             PayTabs.putExtra("pt_secret_key","F6oUQA0OMANTdh6MFNYiLbGRihq19HFPO3JFEJtqkgkxxrjceiv0ubSNsiPC0urOyatcUXCedXLLp5YDotETEwG7PvJP0bEym8Kh");
@@ -72,14 +71,9 @@ CallbackContext callback;
             PayTabs.putExtra("pt_country_shipping", "SAU");
             PayTabs.putExtra("pt_postal_code_shipping", args.   getString("postal_code_shipping"));
 
-
             cordova.startActivityForResult((CordovaPlugin) this, PayTabs, 0);
-//            getResult(callbackContext);
-        }
 
-//        // Send no result, to execute the callbacks later
-//        PluginResult pluginResult = new  PluginResult(PluginResult.Status.NO_RESULT);
-//        pluginResult.setKeepCallback(true); // Keep callback
+        }
 
         return true;
     }
@@ -114,45 +108,8 @@ CallbackContext callback;
         object.put("response_code", pt_response_code);
         object.put("transaction_id", pt_transaction_id);
 
-//        cordova.setActivityResultCallback(result);
         this.callback.sendPluginResult(new PluginResult(PluginResult.Status.OK, new JSONObject(object)));
 
     }
-
-//    @Override
-//    public void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
-//        if(resultCode == cordova.getActivity().RESULT_OK){
-//            Context context = cordova.getActivity();
-//            SharedPreferences shared_prefs = context.getSharedPreferences("myapp_shared", MODE_PRIVATE);
-//            String pt_response_code = shared_prefs.getString("pt_response_code", "");
-//            String pt_transaction_id = shared_prefs.getString("pt_transaction_id", "");
-//
-//            JSONObject obj = new JSONObject();
-//
-//
-//            try {
-//
-//                obj.put("response_code", pt_response_code);
-//                obj.put("transaction_id", pt_transaction_id);
-//            } catch (Exception ex) {
-//                PUBLIC_CALLBACKS.error("Something went wrong " + ex);
-//            }
-//
-//            PluginResult result = new PluginResult(PluginResult.Status.OK, obj);
-//            result.setKeepCallback(true);
-//            PUBLIC_CALLBACKS.success(obj);
-//            return;
-//
-//        }
-//        else if(resultCode == cordova.getActivity().RESULT_CANCELED){
-//            PluginResult resultado = new PluginResult(PluginResult.Status.OK, "canceled action, process this in javascript");
-//            resultado.setKeepCallback(true);
-//            PUBLIC_CALLBACKS.sendPluginResult(resultado);
-//            return;
-//        }
-//        // Handle other results if exists.
-//        super.onActivityResult(requestCode, resultCode, data);
-//    }
-
 
 }

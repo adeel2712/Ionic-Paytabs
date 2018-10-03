@@ -16,10 +16,6 @@
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml" />
         <source-file src="src/android/paytab.java" target-dir="src/cordova/plugin/paytab" />
-        <!-- <preference name="paytabs-android-SDK-v2.5" default="" />
-        <framework src="src/android/sdk/paytabs-android-SDK-v2.5.aar:paytabs-android-SDK-v2.5" /> -->
-        <!-- <framework src="src/android/paytab.gradle" custom="true" type="gradleReference" /> -->
-        <!-- <resource-file src="src/android/sdk/paytabs-android-SDK-v2.5.aar" target="libs/paytabs-android-SDK-v2.5.aar" />   -->
     </platform>
 
 

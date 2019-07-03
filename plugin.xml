@@ -27,17 +27,17 @@
         </config-file>
         <dependency id="cordova-plugin-add-swift-support" spec="~1.7.1" />
         <source-file src="src/ios/paytab.swift"/>
-        <framework src="BIObjCHelpers" podspec="" spec=""/>
-        <framework src="AFNetworking" podspec="" spec=""/>
-        <framework src="Mantle" podspec="" spec=""/>
-        <framework src="Reachability" podspec="" spec=""/>
-        <framework src="SDWebImage" podspec="" spec=""/>
-        <framework src="DGActivityIndicatorView" podspec="" spec=""/>
-        <framework src="Lockbox" podspec="" spec=""/>
-        <framework src="YLGIFImage" podspec="" spec=""/>
-        <framework src="SBJson" podspec="" spec=""/>
-        <framework src="PINCache" podspec="" spec=""/>
-        <framework src="IQKeyboardManager" podspec="" spec=""/>
+        <framework src="BIObjCHelpers" type="podspec" spec=""/>
+        <framework src="AFNetworking" type="podspec" spec=""/>
+        <framework src="Mantle" type="podspec" spec=""/>
+        <framework src="Reachability" type="podspec" spec=""/>
+        <framework src="SDWebImage" type="podspec" spec=""/>
+        <framework src="DGActivityIndicatorView" type="podspec" spec=""/>
+        <framework src="Lockbox" type="podspec" spec=""/>
+        <framework src="YLGIFImage" type="podspec" spec=""/>
+        <framework src="SBJson" type="podspec" spec=""/>
+        <framework src="PINCache" type="podspec" spec=""/>
+        <framework src="IQKeyboardManager" type="podspec" spec=""/>
         
     </platform>
 </plugin>

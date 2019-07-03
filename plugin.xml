@@ -27,6 +27,8 @@
         </config-file>
         <dependency id="cordova-plugin-add-swift-support" spec="~1.7.1" />
         <source-file src="src/ios/paytab.swift"/>
+        <framework src="src/ios/paytabs-iOS.framework" custom="true" />
+        <framework src="src/ios/Resources.bundle" custom="true" />
         <framework src="BIObjCHelpers" type="podspec" spec=""/>
         <framework src="AFNetworking" type="podspec" spec=""/>
         <framework src="Mantle" type="podspec" spec=""/>

@@ -1,23 +1,47 @@
 {
-  "name": "ionicpaytabsapp",
-  "version": "1.0.0",
-  "description": "To enable paytab ANdroid APi",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "git+https://github.com/Kunwar-Adeel/Ionic-Paytabs.git",
+  "_id": "ionicpaytabsapp@1.0.0",
+  "_inBundle": false,
+  "_location": "/ionicpaytabsapp",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/Kunwar-Adeel/Ionic-Paytabs",
+    "rawSpec": "https://github.com/Kunwar-Adeel/Ionic-Paytabs",
+    "saveSpec": "git+https://github.com/Kunwar-Adeel/Ionic-Paytabs.git",
+    "fetchSpec": "https://github.com/Kunwar-Adeel/Ionic-Paytabs.git",
+    "gitCommittish": null
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/Kunwar-Adeel/Ionic-Paytabs.git#f1e28f8e186c68db6f19419a8bca1f85f6347618",
+  "_spec": "https://github.com/Kunwar-Adeel/Ionic-Paytabs",
+  "_where": "/Users/adeel/Documents/Bahjah/App",
+  "author": {
+    "name": "Uxman"
+  },
+  "bugs": {
+    "url": "https://github.com/UxmanKaxmi/paytabTest/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "To enable paytab ANdroid APi",
+  "homepage": "https://github.com/UxmanKaxmi/paytabTest#readme",
   "keywords": [
     "ionic",
     "paytab"
   ],
-  "author": "Adeel",
   "license": "ISC",
+  "main": "index.js",
+  "name": "ionicpaytabsapp",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kunwar-Adeel/Ionic-Paytabs.git"
+    "url": "git+https://github.com/UxmanKaxmi/paytabTest.git"
   },
-  "bugs": {
-    "url": "https://github.com/Kunwar-Adeel/Ionic-Paytabs/issues"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/Kunwar-Adeel/Ionic-Paytabs#readme"
+  "version": "1.0.0"
 }
